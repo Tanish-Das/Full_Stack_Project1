@@ -154,4 +154,13 @@ app.post("/update", async (req, res) => {
         console.log(e)
     }
 })
-
+app.post("/delete", async (req, res) => {
+    const { id } = req.body;
+    try {
+        const deletedData = await Register.findByIdAndDelete(id);
+        res.send(deletedData)
+    } catch (e) {
+        console.log(e)
+        res.send("Error deleting user")
+    }
+})
