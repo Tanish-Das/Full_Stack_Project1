@@ -74,6 +74,10 @@
                     <input name="id" hidden type="text" value="{{this._id}}">
                     <input type="submit" value="Update">
                 </form>
+                <form action="/delete" method="post">
+                    <input name="id" hidden type="text" value="{{this._id}}">
+                    <input type="submit" value="Delete">
+                </form>
             </td>
         </tr>
     {{/each}}
